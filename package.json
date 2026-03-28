@@ -1,22 +1,15 @@
 {
-  "name": "next-blok-3",
+  "name": "hbo-keuze",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push",
-    "db:migrate": "prisma migrate dev",
-    "db:studio": "prisma studio",
-    "db:seed": "prisma db seed"
+    "lint": "eslint"
   },
   "dependencies": {
-    "@prisma/adapter-mariadb": "^7.5.0",
-    "@prisma/client": "^7.5.0",
-    "next": "16.2.0",
+    "next": "16.2.1",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -26,8 +19,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.0",
-    "prisma": "^7.5.0",
+    "eslint-config-next": "16.2.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
