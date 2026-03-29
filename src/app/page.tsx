@@ -5,7 +5,7 @@ export default function HomePage() {
     { name: "Home", href: "/" },
     { name: "Quiz", href: "/quiz" },
     { name: "Opleidingen", href: "/opleidingen" },
-    { name: "Over ons", href: "/over-ons" },
+    { name: "Over ons", href: "/about-us" },
   ];
 
   return (
