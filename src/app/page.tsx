@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     //main container met achtergrond en tekstkleur
     <main className="min-h-screen bg-[#0D0F14] text-[#F5F7FB]">
-      <div className="mx-auto flex min-h-screen max-w-7xl">
+      <div className="flex min-h-screen w-full">
         <aside className="hidden w-56 flex-col border-r border-[#2A3345] bg-[#11151D] p-6 md:flex">
           <div className="mb-10">
             <h2 className="text-xl font-semibold">Mijn HBO Keuze</h2>
