@@ -1,0 +1,143 @@
+{
+  "opleidingen": [
+    {
+      "id": "hbo-ict-hhs",
+      "naam": "HBO-ICT",
+      "beschrijving": "Een brede ICT-opleiding met specialisaties zoals Software Engineering, Cyber Security en Data Science.",
+      "categorie": "Techniek & ICT",
+      "type": "Voltijd",
+      "kenmerken": {
+        "skills": ["Analytisch", "Probleemoplossend", "Logisch denken"],
+        "interesses": ["Techniek", "Computers", "Innovatie"]
+      },
+      "school": {
+        "naam": "De Haagse Hogeschool",
+        "afkorting": "HHS",
+        "locatie": {
+          "stad": "Den Haag",
+          "land": "Nederland",
+          "adres": "Johanna Westerdijkplein 75"
+        },
+        "website": "https://www.dehaagsehogeschool.nl"
+      }
+    },
+    {
+      "id": "cmd-hhs",
+      "naam": "Communication and Multimedia Design",
+      "beschrijving": "Ontwerp interactieve media-oplossingen waarbij de gebruiker centraal staat.",
+      "categorie": "Media & Design",
+      "type": "Voltijd",
+      "kenmerken": {
+        "skills": ["Creativiteit", "Empathie", "Visueel ontwerp"],
+        "interesses": ["Design", "Media", "Gebruikerservaring"]
+      },
+      "school": {
+        "naam": "De Haagse Hogeschool",
+        "afkorting": "HHS",
+        "locatie": {
+          "stad": "Den Haag",
+          "land": "Nederland",
+          "adres": "Johanna Westerdijkplein 75"
+        },
+        "website": "https://www.dehaagsehogeschool.nl"
+      }
+    },
+    {
+      "id": "verpleegkunde-hr",
+      "naam": "Verpleegkunde",
+      "beschrijving": "Leer hoe je professionele zorg verleent en mensen ondersteunt bij hun gezondheid.",
+      "categorie": "Zorg & Welzijn",
+      "type": "Voltijd",
+      "kenmerken": {
+        "skills": ["Sociaal", "Stressbestendig", "Zorgzaam"],
+        "interesses": ["Gezondheid", "Mensen helpen", "Medisch"]
+      },
+      "school": {
+        "naam": "Hogeschool Rotterdam",
+        "afkorting": "HR",
+        "locatie": {
+          "stad": "Rotterdam",
+          "land": "Nederland",
+          "adres": "Museumpark 40"
+        },
+        "website": "https://www.hogeschoolrotterdam.nl"
+      }
+    },
+    {
+      "id": "commerciele-economie-hva",
+      "naam": "Commerciële Economie",
+      "beschrijving": "Ontwikkel je tot een marketing- en salesprofessional in de dynamische zakenwereld.",
+      "categorie": "Economie & Management",
+      "type": "Voltijd",
+      "kenmerken": {
+        "skills": ["Overtuigingskracht", "Commercieel inzicht", "Netwerken"],
+        "interesses": ["Marketing", "Ondernemen", "Trends"]
+      },
+      "school": {
+        "naam": "Hogeschool van Amsterdam",
+        "afkorting": "HvA",
+        "locatie": {
+          "stad": "Amsterdam",
+          "land": "Nederland",
+          "adres": "Wibautstraat 3b"
+        },
+        "website": "https://www.hva.nl"
+      }
+    },
+    {
+      "id": "toegepaste-psychologie-hl",
+      "naam": "Toegepaste Psychologie",
+      "beschrijving": "Pas psychologische kennis toe om menselijk gedrag te begrijpen en te beïnvloeden.",
+      "categorie": "Gedrag & Maatschappij",
+      "type": "Voltijd",
+      "kenmerken": {
+        "skills": ["Luisteren", "Analyseren", "Inlevingsvermogen"],
+        "interesses": ["Psychologie", "Coaching", "Maatschappij"]
+      },
+      "school": {
+        "naam": "Hogeschool Leiden",
+        "afkorting": "HL",
+        "locatie": {
+          "stad": "Leiden",
+          "land": "Nederland",
+          "adres": "Zernikedreef 11"
+        },
+        "website": "https://www.hsleiden.nl"
+      }
+    }
+  ],
+  "scholen": [
+    {
+      "id": "hhs",
+      "naam": "De Haagse Hogeschool",
+      "stad": "Den Haag",
+      "beschrijving": "Een internationale hogeschool met een sterke focus op wereldburgerschap.",
+      "aantal_studenten": 26000,
+      "website": "https://www.dehaagsehogeschool.nl"
+    },
+    {
+      "id": "hr",
+      "naam": "Hogeschool Rotterdam",
+      "stad": "Rotterdam",
+      "beschrijving": "Gevestigd in het hart van de havenstad, gericht op praktijkgericht onderwijs.",
+      "aantal_studenten": 40000,
+      "website": "https://www.hogeschoolrotterdam.nl"
+    },
+    {
+      "id": "hva",
+      "naam": "Hogeschool van Amsterdam",
+      "stad": "Amsterdam",
+      "beschrijving": "De grootste hogeschool van Nederland met campussen door heel Amsterdam.",
+      "aantal_studenten": 46000,
+      "website": "https://www.hva.nl"
+    },
+    {
+      "id": "hl",
+      "naam": "Hogeschool Leiden",
+      "stad": "Leiden",
+      "beschrijving": "Een persoonlijke hogeschool gelegen in het Bio Science Park.",
+      "aantal_studenten": 13000,
+      "website": "https://www.hsleiden.nl"
+    }
+  ]
+}
