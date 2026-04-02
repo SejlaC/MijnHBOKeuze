@@ -6,6 +6,7 @@
       "description": "Een brede ICT-opleiding met specialisaties zoals Software Engineering, Cyber Security en Data Science.",
       "category": "Techniek & ICT",
       "type": "Fulltime",
+      "scoreKeys": ["ict", "software", "data", "techniek"],
       "characteristics": {
         "skills": ["Analytisch", "Probleemoplossend", "Logisch denken"],
         "interests": ["Techniek", "Computers", "Innovatie"]
@@ -27,6 +28,7 @@
       "description": "Ontwerp interactieve media-oplossingen waarbij de gebruiker centraal staat.",
       "category": "Media & Design",
       "type": "Fulltime",
+      "scoreKeys": ["cmd", "media"],
       "characteristics": {
         "skills": ["Creativiteit", "Empathie", "Visueel ontwerp"],
         "interests": ["Design", "Media", "Gebruikerservaring"]
@@ -48,6 +50,7 @@
       "description": "Leer hoe je professionele zorg verleent en mensen ondersteunt bij hun gezondheid.",
       "category": "Zorg & Welzijn",
       "type": "Fulltime",
+      "scoreKeys": ["zorg", "social"],
       "characteristics": {
         "skills": ["Sociaal", "Stressbestendig", "Zorgzaam"],
         "interests": ["Gezondheid", "Mensen helpen", "Medisch"]
@@ -69,6 +72,7 @@
       "description": "Ontwikkel je tot een marketing- en salesprofessional in de dynamische zakenwereld.",
       "category": "Economie & Management",
       "type": "Fulltime",
+      "scoreKeys": ["business", "finance"],
       "characteristics": {
         "skills": ["Overtuigingskracht", "Commercieel inzicht", "Netwerken"],
         "interests": ["Marketing", "Ondernemen", "Trends"]
@@ -90,6 +94,7 @@
       "description": "Pas psychologische kennis toe om menselijk gedrag te begrijpen en te beïnvloeden.",
       "category": "Gedrag & Maatschappij",
       "type": "Fulltime",
+      "scoreKeys": ["social", "recht"],
       "characteristics": {
         "skills": ["Luisteren", "Analyseren", "Inlevingsvermogen"],
         "interests": ["Psychologie", "Coaching", "Maatschappij"]
