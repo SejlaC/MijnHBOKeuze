@@ -2,57 +2,112 @@
   "questions": [
     {
       "id": 1,
-      "emoji": "🎯",
-      "question": "Wat doe je het liefst in je vrije tijd?",
+      "emoji": "💡",
+      "question": "Wat spreekt jou het meest aan?",
       "options": [
-        { "emoji": "💻", "label": "Programmeren", "sub": "Code & bouwen", "scores": { "ict": 5, "software": 4 } },
-        { "emoji": "🎨", "label": "Designen", "sub": "Creatief maken", "scores": { "cmd": 5, "media": 4 } },
-        { "emoji": "🤝", "label": "Mensen helpen", "sub": "Sociaal bezig", "scores": { "zorg": 5, "social": 4 } },
-        { "emoji": "📊", "label": "Plannen", "sub": "Structuur & cijfers", "scores": { "business": 5, "finance": 4 } }
+        { "emoji": "🤖", "label": "Technologie & gadgets", "sub": "De nieuwste snufjes", "scores": { "ict": 5, "techniek": 4 } },
+        { "emoji": "🎨", "label": "Kunst & creatie", "sub": "Mooie dingen maken", "scores": { "cmd": 5, "kunst": 4, "design": 4 } },
+        { "emoji": "❤️", "label": "Zorg & welzijn", "sub": "Iets voor anderen betekenen", "scores": { "zorg": 5, "social": 4 } },
+        { "emoji": "📊", "label": "Cijfers & strategie", "sub": "Analyseren en plannen", "scores": { "business": 5, "finance": 4, "data": 3 } }
       ]
     },
     {
       "id": 2,
       "emoji": "⚙️",
-      "question": "Hoe werk jij het liefst?",
+      "question": "Hoe werk je het liefst?",
       "options": [
-        { "emoji": "🧑‍💻", "label": "Gefocust alleen", "sub": "Deep work", "scores": { "software": 5, "data": 4 } },
-        { "emoji": "👥", "label": "In team", "sub": "Samen knallen", "scores": { "social": 5, "business": 4 } },
-        { "emoji": "🎤", "label": "Presenteren", "sub": "Pitchen", "scores": { "media": 5, "recht": 4 } },
-        { "emoji": "🔬", "label": "Onderzoeken", "sub": "Testen/analyseren", "scores": { "data": 5, "techniek": 4 } }
+        { "emoji": "🛠️", "label": "Praktisch bezig", "sub": "Met mijn handen", "scores": { "techniek": 5, "bouwkunde": 4 } },
+        { "emoji": "💻", "label": "Achter de computer", "sub": "Programmeren of ontwerpen", "scores": { "ict": 5, "software": 5, "cmd": 3 } },
+        { "emoji": "🗣️", "label": "In gesprek met mensen", "sub": "Coachen of adviseren", "scores": { "social": 5, "recht": 4, "onderwijs": 4 } },
+        { "emoji": "🔬", "label": "Onderzoekend", "sub": "Testen en analyseren", "scores": { "data": 5, "biologie": 4, "gezondheid": 3 } }
       ]
     },
     {
       "id": 3,
-      "emoji": "🧠",
-      "question": "Wat past het beste bij jou?",
+      "emoji": "🌱",
+      "question": "Welke sector trekt je het meest?",
       "options": [
-        { "emoji": "🔧", "label": "Dingen bouwen", "sub": "Technisch & hands-on", "scores": { "techniek": 5, "ict": 3 } },
-        { "emoji": "🎭", "label": "Creatief uiten", "sub": "Kunst & expressie", "scores": { "cmd": 5, "media": 3 } },
-        { "emoji": "💬", "label": "Mensen begeleiden", "sub": "Coaching & support", "scores": { "social": 5, "zorg": 4 } },
-        { "emoji": "📈", "label": "Strategisch denken", "sub": "Plannen & analyseren", "scores": { "business": 5, "finance": 4 } }
+        { "emoji": "💼", "label": "Zakelijk & commercieel", "sub": "Marketing, sales, finance", "scores": { "business": 5, "finance": 4, "logistiek": 3 } },
+        { "emoji": "🏥", "label": "Gezondheidszorg", "sub": "Ziekenhuis, praktijk", "scores": { "zorg": 5, "gezondheid": 5 } },
+        { "emoji": "🎓", "label": "Onderwijs & opvoeding", "sub": "Lesgeven of begeleiden", "scores": { "onderwijs": 5, "pabo": 5, "pedagogiek": 4 } },
+        { "emoji": "🌍", "label": "Natuur & milieu", "sub": "Duurzaamheid, water", "scores": { "biologie": 4, "water": 5, "aarde": 5 } }
       ]
     },
     {
       "id": 4,
-      "emoji": "🌍",
-      "question": "Waar wil jij over 5 jaar werken?",
+      "emoji": "🎭",
+      "question": "Wat voor type project past bij jou?",
       "options": [
-        { "emoji": "🏢", "label": "Tech bedrijf", "sub": "Startup of corporate", "scores": { "ict": 5, "software": 4, "data": 3 } },
-        { "emoji": "🎬", "label": "Creatief bureau", "sub": "Design of media", "scores": { "cmd": 5, "media": 4 } },
-        { "emoji": "🏥", "label": "Zorg of welzijn", "sub": "Mensen ondersteunen", "scores": { "zorg": 5, "social": 4 } },
-        { "emoji": "💼", "label": "Zakelijke omgeving", "sub": "Finance of management", "scores": { "business": 5, "finance": 4, "recht": 3 } }
+        { "emoji": "🎬", "label": "Creatieve producties", "sub": "Video, design, muziek", "scores": { "media": 5, "cmd": 4, "kunst": 5 } },
+        { "emoji": "📱", "label": "Digitale producten", "sub": "Apps, websites, software", "scores": { "software": 5, "ict": 5, "design": 3 } },
+        { "emoji": "🤝", "label": "Maatschappelijke impact", "sub": "Mensen helpen, recht", "scores": { "social": 5, "recht": 5, "zorg": 3 } },
+        { "emoji": "🏗️", "label": "Fysieke bouwprojecten", "sub": "Constructie, infrastructuur", "scores": { "bouwkunde": 5, "techniek": 4 } }
       ]
     },
     {
       "id": 5,
+      "emoji": "🧠",
+      "question": "Welke vaardigheid omschrijft jou het best?",
+      "options": [
+        { "emoji": "🔍", "label": "Analytisch", "sub": "Problemen ontleden", "scores": { "data": 5, "ict": 4, "finance": 4 } },
+        { "emoji": "💬", "label": "Communicatief", "sub": "Luisteren en overbrengen", "scores": { "social": 5, "recht": 4, "onderwijs": 4 } },
+        { "emoji": "🎨", "label": "Creatief", "sub": "Originele ideeën", "scores": { "cmd": 5, "kunst": 5, "design": 5 } },
+        { "emoji": "🛠️", "label": "Praktisch technisch", "sub": "Oplossingen bouwen", "scores": { "techniek": 5, "bouwkunde": 4, "ict": 3 } }
+      ]
+    },
+    {
+      "id": 6,
       "emoji": "📚",
       "question": "Hoe leer jij het liefst?",
       "options": [
-        { "emoji": "🖥️", "label": "Door te doen", "sub": "Projecten & experimenten", "scores": { "software": 5, "techniek": 4 } },
-        { "emoji": "🎨", "label": "Visueel & creatief", "sub": "Schetsen & prototypen", "scores": { "cmd": 5, "media": 4 } },
-        { "emoji": "🗣️", "label": "Via gesprekken", "sub": "Discussie & samenwerking", "scores": { "social": 5, "zorg": 3 } },
-        { "emoji": "📖", "label": "Theorie & analyse", "sub": "Lezen & onderzoeken", "scores": { "data": 5, "recht": 4, "finance": 3 } }
+        { "emoji": "📖", "label": "Theorie & literatuur", "sub": "Lezen en verdiepen", "scores": { "recht": 5, "data": 4, "finance": 4 } },
+        { "emoji": "🖥️", "label": "Projectmatig", "sub": "Door te doen", "scores": { "software": 5, "techniek": 4, "cmd": 4 } },
+        { "emoji": "👥", "label": "In groepsverband", "sub": "Samenwerken", "scores": { "social": 5, "business": 4, "onderwijs": 4 } },
+        { "emoji": "🎤", "label": "Presenteren & pitchen", "sub": "Voor een groep staan", "scores": { "media": 5, "recht": 4, "business": 4 } }
+      ]
+    },
+    {
+      "id": 7,
+      "emoji": "🏆",
+      "question": "Wat geeft jou voldoening?",
+      "options": [
+        { "emoji": "🚀", "label": "Iets nieuws lanceren", "sub": "Innovatie", "scores": { "ict": 5, "business": 5, "software": 4 } },
+        { "emoji": "😊", "label": "Iemand blij maken", "sub": "Directe impact", "scores": { "zorg": 5, "social": 5, "onderwijs": 4 } },
+        { "emoji": "🏛️", "label": "Een sterk ontwerp neerzetten", "sub": "Esthetiek en functie", "scores": { "cmd": 5, "design": 5, "bouwkunde": 4 } },
+        { "emoji": "🌿", "label": "Bijdragen aan duurzaamheid", "sub": "Milieu verbeteren", "scores": { "water": 5, "biologie": 5, "aarde": 5 } }
+      ]
+    },
+    {
+      "id": 8,
+      "emoji": "🧳",
+      "question": "Waar zie je jezelf werken?",
+      "options": [
+        { "emoji": "🏢", "label": "Kantoor / corporate", "sub": "Zakelijke omgeving", "scores": { "business": 5, "finance": 5, "recht": 4 } },
+        { "emoji": "🏥", "label": "Zorginstelling", "sub": "Ziekenhuis, praktijk", "scores": { "zorg": 5, "gezondheid": 5 } },
+        { "emoji": "🎨", "label": "Creatieve studio", "sub": "Designbureau", "scores": { "cmd": 5, "media": 5, "kunst": 5 } },
+        { "emoji": "🏫", "label": "School of instelling", "sub": "Onderwijs", "scores": { "onderwijs": 5, "pabo": 5, "pedagogiek": 5 } }
+      ]
+    },
+    {
+      "id": 9,
+      "emoji": "🔮",
+      "question": "Welke trend volg jij op de voet?",
+      "options": [
+        { "emoji": "🤖", "label": "AI & automatisering", "sub": "Tech ontwikkelingen", "scores": { "ict": 5, "data": 5, "software": 5 } },
+        { "emoji": "🌱", "label": "Duurzaamheid & klimaat", "sub": "Groene innovatie", "scores": { "water": 5, "biologie": 5, "aarde": 5 } },
+        { "emoji": "👗", "label": "Mode & lifestyle", "sub": "Consumentengedrag", "scores": { "fashion": 5, "media": 4, "business": 4 } },
+        { "emoji": "⚖️", "label": "Maatschappelijke verandering", "sub": "Rechtvaardigheid", "scores": { "recht": 5, "social": 5 } }
+      ]
+    },
+    {
+      "id": 10,
+      "emoji": "🎯",
+      "question": "Wat voor soort opleiding zoek je?",
+      "options": [
+        { "emoji": "💻", "label": "ICT & Techniek", "sub": "Bèta/technisch", "scores": { "ict": 5, "techniek": 5, "software": 5 } },
+        { "emoji": "🎭", "label": "Kunst & Media", "sub": "Creatief", "scores": { "cmd": 5, "media": 5, "kunst": 5 } },
+        { "emoji": "🤲", "label": "Zorg & Welzijn", "sub": "Mensgericht", "scores": { "zorg": 5, "social": 5, "gezondheid": 5 } },
+        { "emoji": "📈", "label": "Economie & Management", "sub": "Zakelijk", "scores": { "business": 5, "finance": 5, "logistiek": 5 } }
       ]
     }
   ]

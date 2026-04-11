@@ -13,6 +13,24 @@ const navItems = [
   { name: "Over ons", href: "/about-us" },
 ];
 
+function getMaxScoresPerKey() {
+  const maxPerKey: Record<string, number> = {};
+
+  quizData.questions.forEach((question) => {
+    const maxInQuestion: Record<string, number> = {};
+    question.options.forEach((option) => {
+      Object.entries(option.scores).forEach(([key, value]) => {
+        maxInQuestion[key] = Math.max(maxInQuestion[key] || 0, value);
+      });
+    });
+    Object.entries(maxInQuestion).forEach(([key, value]) => {
+      maxPerKey[key] = (maxPerKey[key] || 0) + value;
+    });
+  });
+
+  return maxPerKey;
+}
+
 export default function QuizPage() {
   const { step, currentQuestion, scores, startQuiz, answer, reset } = useQuizStore();
 
@@ -22,32 +40,46 @@ export default function QuizPage() {
   const isDone = currentQuestion >= totalQuestions;
 
   const getResults = () => {
-    const maxTotal = quizData.questions.reduce((acc: number, q: any) => {
-      const best = Math.max(
-        ...q.options.map((o: any) =>
-          Object.values(o.scores).reduce((s: number, v: any) => s + Number(v), 0)
-        )
-      );
-      return acc + best;
-    }, 0);
+    const maxPerKey = getMaxScoresPerKey();
+
+    const keyPercentages: Record<string, number> = {};
+    Object.entries(scores).forEach(([key, achieved]) => {
+      const max = maxPerKey[key] || 0;
+      keyPercentages[key] = max > 0 ? (achieved / max) * 100 : 0;
+    });
 
     return catalogData.programs
       .map((program: any) => {
-        const raw = (program.scoreKeys || []).reduce(
-          (acc: number, key: string) => acc + (scores[key] || 0),
-          0
-        );
-        const percent = maxTotal > 0 ? Math.round((raw / maxTotal) * 100) : 0;
-        return { ...program, matchScore: raw, matchPercent: percent };
+        const keys = program.scoreKeys || [];
+        if (keys.length === 0) {
+          return { ...program, matchPercent: 0, matchReason: "" };
+        }
+
+        const avgPercent =
+          keys.reduce((sum, key) => sum + (keyPercentages[key] || 0), 0) / keys.length;
+
+        const keyScores = keys
+          .map((key) => ({ key, percent: keyPercentages[key] || 0 }))
+          .sort((a, b) => b.percent - a.percent);
+        const topKeys = keyScores.slice(0, 2).map((k) => k.key);
+        const reason =
+          topKeys.length > 0
+            ? `Past goed bij jouw interesse in ${topKeys.join(" en ")}.`
+            : "Deze opleiding sluit aan bij jouw profiel.";
+
+        return {
+          ...program,
+          matchPercent: Math.round(avgPercent),
+          matchReason: reason,
+        };
       })
-      .sort((a: any, b: any) => b.matchScore - a.matchScore)
+      .sort((a: any, b: any) => b.matchPercent - a.matchPercent)
       .slice(0, 3);
   };
 
   return (
     <main className="min-h-screen bg-[#0D0F14] text-[#F5F7FB]">
       <div className="flex min-h-screen w-full">
-
         {/* Sidebar */}
         <aside className="hidden w-56 flex-col border-r border-[#2A3345] bg-[#11151D] p-6 md:flex">
           <div className="mb-10">
@@ -67,10 +99,9 @@ export default function QuizPage() {
           </nav>
         </aside>
 
-        {/* Content */}
-        <section className="flex flex-1 items-start justify-center px-6 py-12">
+        {/* Content - gecentreerd */}
+        <section className="flex flex-1 items-center justify-center px-6 py-12">
           <div className="w-full max-w-2xl">
-
             {/* ── START ── */}
             {step === "start" && (
               <motion.div
@@ -108,7 +139,6 @@ export default function QuizPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* Progress */}
                 <div className="mb-8">
                   <div className="flex justify-between text-sm text-[#7E8AA3] mb-2">
                     <span>Vraag {currentQuestion + 1} van {totalQuestions}</span>
@@ -200,8 +230,10 @@ export default function QuizPage() {
                             <p className="text-sm text-[#A8B3C7] mt-3 leading-relaxed">
                               {res.description}
                             </p>
+                            <p className="text-sm text-[#7DD3FC] mt-2 italic">
+                              {res.matchReason}
+                            </p>
                           </div>
-                          {/* Match % badge */}
                           <div className="flex flex-col items-center justify-center rounded-2xl border border-[#2A3345] bg-[#0D0F14] px-4 py-3 min-w-[72px]">
                             <span className="text-2xl font-bold text-[#7DD3FC]">
                               {res.matchPercent}%
@@ -222,7 +254,6 @@ export default function QuizPage() {
                 </button>
               </motion.div>
             )}
-
           </div>
         </section>
       </div>
