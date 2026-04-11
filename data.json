@@ -109,6 +109,600 @@
         },
         "website": "https://www.hsleiden.nl"
       }
+    },
+    {
+      "id": "accountancy-hhs",
+      "name": "Accountancy",
+      "description": "Leer financiële overzichten opstellen, controleren en adviseren over fiscale zaken.",
+      "category": "Economie & Management",
+      "type": "Fulltime",
+      "scoreKeys": ["finance", "accounting"],
+      "characteristics": {
+        "skills": ["Cijfermatig", "Nauwkeurig", "Analytisch"],
+        "interests": ["Financiën", "Cijfers", "Advies"]
+      },
+      "school": {
+        "name": "De Haagse Hogeschool",
+        "abbreviation": "HHS",
+        "location": {
+          "city": "Den Haag",
+          "country": "Netherlands",
+          "address": "Johanna Westerdijkplein 75"
+        },
+        "website": "https://www.dehaagsehogeschool.nl"
+      }
+    },
+    {
+      "id": "bedrijfskunde-hva",
+      "name": "Bedrijfskunde",
+      "description": "Leer organisaties te verbeteren op het gebied van strategie, processen en mensen.",
+      "category": "Economie & Management",
+      "type": "Fulltime",
+      "scoreKeys": ["business", "management"],
+      "characteristics": {
+        "skills": ["Leiderschap", "Analytisch", "Strategisch"],
+        "interests": ["Organisatie", "Management", "Verbetering"]
+      },
+      "school": {
+        "name": "Hogeschool van Amsterdam",
+        "abbreviation": "HvA",
+        "location": {
+          "city": "Amsterdam",
+          "country": "Netherlands",
+          "address": "Wibautstraat 3b"
+        },
+        "website": "https://www.hva.nl"
+      }
+    },
+    {
+      "id": "bouwkunde-hr",
+      "name": "Bouwkunde",
+      "description": "Ontwerp en realiseer bouwprojecten, van woningen tot utiliteitsbouw.",
+      "category": "Techniek & ICT",
+      "type": "Fulltime",
+      "scoreKeys": ["bouwkunde", "techniek"],
+      "characteristics": {
+        "skills": ["Technisch inzicht", "Creativiteit", "Projectmatig"],
+        "interests": ["Bouw", "Architectuur", "Duurzaamheid"]
+      },
+      "school": {
+        "name": "Hogeschool Rotterdam",
+        "abbreviation": "HR",
+        "location": {
+          "city": "Rotterdam",
+          "country": "Netherlands",
+          "address": "Museumpark 40"
+        },
+        "website": "https://www.hogeschoolrotterdam.nl"
+      }
+    },
+    {
+      "id": "communicatie-hu",
+      "name": "Communicatie",
+      "description": "Leer hoe je organisaties helpt met interne en externe communicatie, van persberichten tot campagnes.",
+      "category": "Taal & Communicatie",
+      "type": "Fulltime",
+      "scoreKeys": ["communicatie", "media"],
+      "characteristics": {
+        "skills": ["Schriftelijk", "Creatief", "Strategisch"],
+        "interests": ["Media", "PR", "Schrijven"]
+      },
+      "school": {
+        "name": "Hogeschool Utrecht",
+        "abbreviation": "HU",
+        "location": {
+          "city": "Utrecht",
+          "country": "Netherlands",
+          "address": "Padualaan 101"
+        },
+        "website": "https://www.hu.nl"
+      }
+    },
+    {
+      "id": "fysiotherapie-han",
+      "name": "Fysiotherapie",
+      "description": "Help mensen bij het herstellen van blessures en het verbeteren van hun bewegingsapparaat.",
+      "category": "Gezondheidszorg",
+      "type": "Fulltime",
+      "scoreKeys": ["zorg", "gezondheid"],
+      "characteristics": {
+        "skills": ["Praktisch", "Empathisch", "Motiverend"],
+        "interests": ["Menselijk lichaam", "Beweging", "Gezondheid"]
+      },
+      "school": {
+        "name": "HAN University of Applied Sciences",
+        "abbreviation": "HAN",
+        "location": {
+          "city": "Nijmegen",
+          "country": "Netherlands",
+          "address": "Kapittelweg 33"
+        },
+        "website": "https://www.han.nl"
+      }
+    },
+    {
+      "id": "international-business-avans",
+      "name": "International Business",
+      "description": "Word een expert in internationale handel, marketing en management.",
+      "category": "Economie & Management",
+      "type": "Fulltime",
+      "scoreKeys": ["business", "internationaal"],
+      "characteristics": {
+        "skills": ["Taalvaardig", "Commercieel", "Intercultureel"],
+        "interests": ["Internationaal", "Handel", "Culturen"]
+      },
+      "school": {
+        "name": "Avans Hogeschool",
+        "abbreviation": "Avans",
+        "location": {
+          "city": "Breda",
+          "country": "Netherlands",
+          "address": "Hogeschoollaan 1"
+        },
+        "website": "https://www.avans.nl"
+      }
+    },
+    {
+      "id": "leraar-basisonderwijs-fontys",
+      "name": "Leraar Basisonderwijs (Pabo)",
+      "description": "Word leerkracht in het basisonderwijs en inspireer de volgende generatie.",
+      "category": "Onderwijs & Opvoeding",
+      "type": "Fulltime",
+      "scoreKeys": ["onderwijs", "pabo"],
+      "characteristics": {
+        "skills": ["Pedagogisch", "Didactisch", "Geduldig"],
+        "interests": ["Kinderen", "Lesgeven", "Ontwikkeling"]
+      },
+      "school": {
+        "name": "Fontys Hogescholen",
+        "abbreviation": "Fontys",
+        "location": {
+          "city": "Eindhoven",
+          "country": "Netherlands",
+          "address": "Rachelsmolen 1"
+        },
+        "website": "https://www.fontys.nl"
+      }
+    },
+    {
+      "id": "social-work-hanze",
+      "name": "Social Work",
+      "description": "Ondersteun mensen in kwetsbare situaties en draag bij aan een inclusieve samenleving.",
+      "category": "Gedrag & Maatschappij",
+      "type": "Fulltime",
+      "scoreKeys": ["social", "welzijn"],
+      "characteristics": {
+        "skills": ["Empathisch", "Communicatief", "Oplossingsgericht"],
+        "interests": ["Mensen", "Maatschappij", "Hulpverlening"]
+      },
+      "school": {
+        "name": "Hanzehogeschool Groningen",
+        "abbreviation": "Hanze",
+        "location": {
+          "city": "Groningen",
+          "country": "Netherlands",
+          "address": "Zernikeplein 7"
+        },
+        "website": "https://www.hanze.nl"
+      }
+    },
+    {
+      "id": "hbo-rechten-inholland",
+      "name": "HBO-Rechten",
+      "description": "Leer juridische vraagstukken op te lossen voor bedrijven, overheden of particulieren.",
+      "category": "Recht & Bestuur",
+      "type": "Fulltime",
+      "scoreKeys": ["recht", "juridisch"],
+      "characteristics": {
+        "skills": ["Analytisch", "Argumenteren", "Nauwkeurig"],
+        "interests": ["Recht", "Wetgeving", "Rechtvaardigheid"]
+      },
+      "school": {
+        "name": "Hogeschool Inholland",
+        "abbreviation": "Inholland",
+        "location": {
+          "city": "Haarlem",
+          "country": "Netherlands",
+          "address": "Bijdorplaan 15"
+        },
+        "website": "https://www.inholland.nl"
+      }
+    },
+    {
+      "id": "creative-media-saxion",
+      "name": "Creative Media and Game Technologies",
+      "description": "Ontwerp en ontwikkel interactieve media, games en virtual reality-toepassingen.",
+      "category": "Media & Design",
+      "type": "Fulltime",
+      "scoreKeys": ["ict", "media", "design"],
+      "characteristics": {
+        "skills": ["Creatief", "Technisch", "Conceptueel"],
+        "interests": ["Games", "Design", "Technologie"]
+      },
+      "school": {
+        "name": "Saxion Hogeschool",
+        "abbreviation": "Saxion",
+        "location": {
+          "city": "Enschede",
+          "country": "Netherlands",
+          "address": "M.H. Tromplaan 28"
+        },
+        "website": "https://www.saxion.nl"
+      }
+    },
+    {
+      "id": "werktuigbouwkunde-nhlstenden",
+      "name": "Werktuigbouwkunde",
+      "description": "Ontwerp, ontwikkel en verbeter machines, apparaten en productieprocessen.",
+      "category": "Techniek & ICT",
+      "type": "Fulltime",
+      "scoreKeys": ["techniek", "engineering"],
+      "characteristics": {
+        "skills": ["Technisch", "Analytisch", "Probleemoplossend"],
+        "interests": ["Techniek", "Ontwerpen", "Productie"]
+      },
+      "school": {
+        "name": "NHL Stenden Hogeschool",
+        "abbreviation": "NHL Stenden",
+        "location": {
+          "city": "Leeuwarden",
+          "country": "Netherlands",
+          "address": "Rengerslaan 10"
+        },
+        "website": "https://www.nhlstenden.com"
+      }
+    },
+    {
+      "id": "hotel-management-buas",
+      "name": "Hotel Management",
+      "description": "Bereid je voor op een managementfunctie in de internationale hotel- en hospitalitybranche.",
+      "category": "Economie & Management",
+      "type": "Fulltime",
+      "scoreKeys": ["hotel", "management"],
+      "characteristics": {
+        "skills": ["Gastvrij", "Leidinggevend", "Commercieel"],
+        "interests": ["Hospitality", "Toerisme", "Service"]
+      },
+      "school": {
+        "name": "Breda University of Applied Sciences",
+        "abbreviation": "BUas",
+        "location": {
+          "city": "Breda",
+          "country": "Netherlands",
+          "address": "Mgr. Hopmansstraat 2"
+        },
+        "website": "https://www.buas.nl"
+      }
+    },
+    {
+      "id": "journalistiek-windesheim",
+      "name": "Journalistiek",
+      "description": "Leer verhalen te vinden, onderzoeken en vertellen via diverse media.",
+      "category": "Taal & Communicatie",
+      "type": "Fulltime",
+      "scoreKeys": ["journalistiek", "media"],
+      "characteristics": {
+        "skills": ["Nieuwsgierig", "Schriftelijk", "Kritisch"],
+        "interests": ["Nieuws", "Media", "Schrijven"]
+      },
+      "school": {
+        "name": "Hogeschool Windesheim",
+        "abbreviation": "Windesheim",
+        "location": {
+          "city": "Zwolle",
+          "country": "Netherlands",
+          "address": "Campus 2"
+        },
+        "website": "https://www.windesheim.nl"
+      }
+    },
+    {
+      "id": "toegepaste-biologie-aeres",
+      "name": "Toegepaste Biologie",
+      "description": "Combineer kennis van biologie met praktische toepassingen in de groene sector.",
+      "category": "Aarde & Milieu",
+      "type": "Fulltime",
+      "scoreKeys": ["biologie", "natuur"],
+      "characteristics": {
+        "skills": ["Onderzoekend", "Praktisch", "Analytisch"],
+        "interests": ["Natuur", "Milieu", "Biologie"]
+      },
+      "school": {
+        "name": "Aeres Hogeschool",
+        "abbreviation": "Aeres",
+        "location": {
+          "city": "Almere",
+          "country": "Netherlands",
+          "address": "Stadhuisstraat 18"
+        },
+        "website": "https://www.aereshogeschool.nl"
+      }
+    },
+    {
+      "id": "bestuurskunde-che",
+      "name": "Bestuurskunde",
+      "description": "Leer hoe de overheid werkt en hoe je maatschappelijke vraagstukken aanpakt.",
+      "category": "Recht & Bestuur",
+      "type": "Fulltime",
+      "scoreKeys": ["bestuur", "overheid"],
+      "characteristics": {
+        "skills": ["Analytisch", "Politiek sensitief", "Strategisch"],
+        "interests": ["Politiek", "Bestuur", "Maatschappij"]
+      },
+      "school": {
+        "name": "Christelijke Hogeschool Ede",
+        "abbreviation": "CHE",
+        "location": {
+          "city": "Ede",
+          "country": "Netherlands",
+          "address": "Oude Kerkweg 100"
+        },
+        "website": "https://www.che.nl"
+      }
+    },
+    {
+      "id": "voeding-en-dietetiek-han",
+      "name": "Voeding en Diëtetiek",
+      "description": "Word expert op het gebied van gezonde voeding en dieetadvies.",
+      "category": "Gezondheidszorg",
+      "type": "Fulltime",
+      "scoreKeys": ["voeding", "gezondheid"],
+      "characteristics": {
+        "skills": ["Adviserend", "Analytisch", "Empathisch"],
+        "interests": ["Voeding", "Gezondheid", "Leefstijl"]
+      },
+      "school": {
+        "name": "HAN University of Applied Sciences",
+        "abbreviation": "HAN",
+        "location": {
+          "city": "Nijmegen",
+          "country": "Netherlands",
+          "address": "Kapittelweg 33"
+        },
+        "website": "https://www.han.nl"
+      }
+    },
+    {
+      "id": "vaktherapie-zuyd",
+      "name": "Vaktherapie",
+      "description": "Gebruik creatieve middelen zoals drama, muziek of beeldende kunst om mensen te helpen.",
+      "category": "Gezondheidszorg",
+      "type": "Fulltime",
+      "scoreKeys": ["therapie", "creatief"],
+      "characteristics": {
+        "skills": ["Creatief", "Empathisch", "Therapeutisch"],
+        "interests": ["Kunst", "Therapie", "Mensen"]
+      },
+      "school": {
+        "name": "Zuyd Hogeschool",
+        "abbreviation": "Zuyd",
+        "location": {
+          "city": "Heerlen",
+          "country": "Netherlands",
+          "address": "Nieuw Eyckholt 300"
+        },
+        "website": "https://www.zuyd.nl"
+      }
+    },
+    {
+      "id": "maritieme-techniek-hz",
+      "name": "Maritieme Techniek",
+      "description": "Ontwerp en bouw schepen, offshore installaties en andere maritieme constructies.",
+      "category": "Techniek & ICT",
+      "type": "Fulltime",
+      "scoreKeys": ["maritiem", "techniek"],
+      "characteristics": {
+        "skills": ["Technisch", "Analytisch", "Projectmatig"],
+        "interests": ["Scheepvaart", "Waterbouw", "Offshore"]
+      },
+      "school": {
+        "name": "HZ University of Applied Sciences",
+        "abbreviation": "HZ",
+        "location": {
+          "city": "Vlissingen",
+          "country": "Netherlands",
+          "address": "Edisonweg 4"
+        },
+        "website": "https://www.hz.nl"
+      }
+    },
+    {
+      "id": "pedagogiek-hsleiden",
+      "name": "Pedagogiek",
+      "description": "Verdiep je in de opvoeding en ontwikkeling van kinderen en jongeren.",
+      "category": "Onderwijs & Opvoeding",
+      "type": "Fulltime",
+      "scoreKeys": ["pedagogiek", "opvoeding"],
+      "characteristics": {
+        "skills": ["Pedagogisch", "Empathisch", "Communicatief"],
+        "interests": ["Kinderen", "Opvoeding", "Ontwikkeling"]
+      },
+      "school": {
+        "name": "Hogeschool Leiden",
+        "abbreviation": "HL",
+        "location": {
+          "city": "Leiden",
+          "country": "Netherlands",
+          "address": "Zernikedreef 11"
+        },
+        "website": "https://www.hsleiden.nl"
+      }
+    },
+    {
+      "id": "logistiek-management-hr",
+      "name": "Logistiek Management",
+      "description": "Leer hoe je goederenstromen en supply chains efficiënt kunt organiseren.",
+      "category": "Economie & Management",
+      "type": "Fulltime",
+      "scoreKeys": ["logistiek", "management"],
+      "characteristics": {
+        "skills": ["Organisatorisch", "Analytisch", "Plannen"],
+        "interests": ["Logistiek", "Transport", "Supply chain"]
+      },
+      "school": {
+        "name": "Hogeschool Rotterdam",
+        "abbreviation": "HR",
+        "location": {
+          "city": "Rotterdam",
+          "country": "Netherlands",
+          "address": "Museumpark 40"
+        },
+        "website": "https://www.hogeschoolrotterdam.nl"
+      }
+    },
+    {
+      "id": "fashion-textile-tech-saxion",
+      "name": "Fashion & Textile Technologies",
+      "description": "Combineer creativiteit met techniek in de wereld van mode en textiel.",
+      "category": "Kunst & Cultuur",
+      "type": "Fulltime",
+      "scoreKeys": ["fashion", "design"],
+      "characteristics": {
+        "skills": ["Creatief", "Technisch", "Trendbewust"],
+        "interests": ["Mode", "Textiel", "Design"]
+      },
+      "school": {
+        "name": "Saxion Hogeschool",
+        "abbreviation": "Saxion",
+        "location": {
+          "city": "Enschede",
+          "country": "Netherlands",
+          "address": "M.H. Tromplaan 28"
+        },
+        "website": "https://www.saxion.nl"
+      }
+    },
+    {
+      "id": "sportkunde-hanze",
+      "name": "Sportkunde",
+      "description": "Word een professional in de sportwereld, van training tot management.",
+      "category": "Gezondheidszorg",
+      "type": "Fulltime",
+      "scoreKeys": ["sport", "gezondheid"],
+      "characteristics": {
+        "skills": ["Motiverend", "Coachend", "Organisatorisch"],
+        "interests": ["Sport", "Beweging", "Gezondheid"]
+      },
+      "school": {
+        "name": "Hanzehogeschool Groningen",
+        "abbreviation": "Hanze",
+        "location": {
+          "city": "Groningen",
+          "country": "Netherlands",
+          "address": "Zernikeplein 7"
+        },
+        "website": "https://www.hanze.nl"
+      }
+    },
+    {
+      "id": "muziek-hku",
+      "name": "Muziek",
+      "description": "Ontwikkel je tot professioneel musicus, componist of muziekdocent.",
+      "category": "Kunst & Cultuur",
+      "type": "Fulltime",
+      "scoreKeys": ["muziek", "kunst"],
+      "characteristics": {
+        "skills": ["Muzikaal", "Creatief", "Discipline"],
+        "interests": ["Muziek", "Optreden", "Componeren"]
+      },
+      "school": {
+        "name": "Hogeschool voor de Kunsten Utrecht",
+        "abbreviation": "HKU",
+        "location": {
+          "city": "Utrecht",
+          "country": "Netherlands",
+          "address": "Lange Viestraat 2B"
+        },
+        "website": "https://www.hku.nl"
+      }
+    },
+    {
+      "id": "watermanagement-hvhl",
+      "name": "Watermanagement",
+      "description": "Leer alles over waterbeheer, van dijken tot waterkwaliteit, nationaal en internationaal.",
+      "category": "Aarde & Milieu",
+      "type": "Fulltime",
+      "scoreKeys": ["water", "milieu"],
+      "characteristics": {
+        "skills": ["Technisch", "Analytisch", "Projectmatig"],
+        "interests": ["Water", "Duurzaamheid", "Natuur"]
+      },
+      "school": {
+        "name": "Hogeschool Van Hall Larenstein",
+        "abbreviation": "VHL",
+        "location": {
+          "city": "Leeuwarden",
+          "country": "Netherlands",
+          "address": "Agora 1"
+        },
+        "website": "https://www.hvhl.nl"
+      }
+    },
+    {
+      "id": "industrieel-product-ontwerpen-hhs",
+      "name": "Industrieel Product Ontwerpen",
+      "description": "Bedenk en ontwerp innovatieve producten voor massaproductie.",
+      "category": "Techniek & ICT",
+      "type": "Fulltime",
+      "scoreKeys": ["design", "techniek"],
+      "characteristics": {
+        "skills": ["Creatief", "Technisch", "Ondernemend"],
+        "interests": ["Ontwerpen", "Productontwikkeling", "Innovatie"]
+      },
+      "school": {
+        "name": "De Haagse Hogeschool",
+        "abbreviation": "HHS",
+        "location": {
+          "city": "Den Haag",
+          "country": "Netherlands",
+          "address": "Johanna Westerdijkplein 75"
+        },
+        "website": "https://www.dehaagsehogeschool.nl"
+      }
+    },
+    {
+      "id": "cultureel-erfgoed-ahk",
+      "name": "Cultureel Erfgoed",
+      "description": "Leer het verleden te bewaren, onderzoeken en presenteren aan een breed publiek.",
+      "category": "Kunst & Cultuur",
+      "type": "Fulltime",
+      "scoreKeys": ["erfgoed", "cultuur"],
+      "characteristics": {
+        "skills": ["Onderzoekend", "Communicatief", "Historisch besef"],
+        "interests": ["Geschiedenis", "Kunst", "Cultuur"]
+      },
+      "school": {
+        "name": "Amsterdamse Hogeschool voor de Kunsten",
+        "abbreviation": "AHK",
+        "location": {
+          "city": "Amsterdam",
+          "country": "Netherlands",
+          "address": "Jodenbreestraat 3"
+        },
+        "website": "https://www.ahk.nl"
+      }
+    },
+    {
+      "id": "bio-informatica-hanze",
+      "name": "Bio-informatica",
+      "description": "Combineer biologie met informatica om complexe biologische data te analyseren.",
+      "category": "Techniek & ICT",
+      "type": "Fulltime",
+      "scoreKeys": ["ict", "biologie"],
+      "characteristics": {
+        "skills": ["Analytisch", "Programmeren", "Onderzoekend"],
+        "interests": ["Biologie", "ICT", "Data-analyse"]
+      },
+      "school": {
+        "name": "Hanzehogeschool Groningen",
+        "abbreviation": "Hanze",
+        "location": {
+          "city": "Groningen",
+          "country": "Netherlands",
+          "address": "Zernikeplein 7"
+        },
+        "website": "https://www.hanze.nl"
+      }
     }
   ],
   "schools": [
@@ -147,6 +741,339 @@
       "description": "Een persoonlijke hogeschool gelegen in het Bio Science Park.",
       "student_count": 13000,
       "website": "https://www.hsleiden.nl"
+    },
+    {
+      "id": "hu",
+      "name": "Hogeschool Utrecht",
+      "abbreviation": "HU",
+      "city": "Utrecht",
+      "description": "Een van de grootste hogescholen van Nederland met een breed opleidingsaanbod.",
+      "student_count": 38000,
+      "website": "https://www.hu.nl"
+    },
+    {
+      "id": "fontys",
+      "name": "Fontys Hogescholen",
+      "abbreviation": "Fontys",
+      "city": "Eindhoven",
+      "description": "Een grote hogeschool met vestigingen in Eindhoven, Tilburg en Venlo.",
+      "student_count": 40000,
+      "website": "https://www.fontys.nl"
+    },
+    {
+      "id": "han",
+      "name": "HAN University of Applied Sciences",
+      "abbreviation": "HAN",
+      "city": "Arnhem",
+      "description": "Een brede hogeschool met campussen in Arnhem en Nijmegen.",
+      "student_count": 33000,
+      "website": "https://www.han.nl"
+    },
+    {
+      "id": "avans",
+      "name": "Avans Hogeschool",
+      "abbreviation": "Avans",
+      "city": "Breda",
+      "description": "Een grote hogeschool met vestigingen in Breda, 's-Hertogenbosch en Tilburg.",
+      "student_count": 29000,
+      "website": "https://www.avans.nl"
+    },
+    {
+      "id": "hanze",
+      "name": "Hanzehogeschool Groningen",
+      "abbreviation": "Hanze",
+      "city": "Groningen",
+      "description": "De grootste hogeschool van Noord-Nederland met een breed aanbod.",
+      "student_count": 27000,
+      "website": "https://www.hanze.nl"
+    },
+    {
+      "id": "inholland",
+      "name": "Hogeschool Inholland",
+      "abbreviation": "Inholland",
+      "city": "Haarlem",
+      "description": "Een brede hogeschool met locaties in de Randstad en daarbuiten.",
+      "student_count": 26000,
+      "website": "https://www.inholland.nl"
+    },
+    {
+      "id": "saxion",
+      "name": "Saxion Hogeschool",
+      "abbreviation": "Saxion",
+      "city": "Enschede",
+      "description": "Een brede hogeschool met campussen in Enschede, Deventer en Apeldoorn.",
+      "student_count": 27000,
+      "website": "https://www.saxion.nl"
+    },
+    {
+      "id": "nhlstenden",
+      "name": "NHL Stenden Hogeschool",
+      "abbreviation": "NHL Stenden",
+      "city": "Leeuwarden",
+      "description": "Een brede hogeschool met campussen in Leeuwarden, Emmen en Meppel.",
+      "student_count": 24000,
+      "website": "https://www.nhlstenden.com"
+    },
+    {
+      "id": "windesheim",
+      "name": "Hogeschool Windesheim",
+      "abbreviation": "Windesheim",
+      "city": "Zwolle",
+      "description": "Een grote hogeschool met campussen in Zwolle en Almere.",
+      "student_count": 24000,
+      "website": "https://www.windesheim.nl"
+    },
+    {
+      "id": "hz",
+      "name": "HZ University of Applied Sciences",
+      "abbreviation": "HZ",
+      "city": "Vlissingen",
+      "description": "Een hogeschool in Zeeland met een focus op delta en water.",
+      "student_count": 5000,
+      "website": "https://www.hz.nl"
+    },
+    {
+      "id": "buas",
+      "name": "Breda University of Applied Sciences",
+      "abbreviation": "BUas",
+      "city": "Breda",
+      "description": "Een gespecialiseerde hogeschool in hospitality, toerisme, media en games.",
+      "student_count": 7000,
+      "website": "https://www.buas.nl"
+    },
+    {
+      "id": "artez",
+      "name": "ArtEZ University of the Arts",
+      "abbreviation": "ArtEZ",
+      "city": "Arnhem",
+      "description": "Een kunsthogeschool met locaties in Arnhem, Enschede en Zwolle.",
+      "student_count": 3000,
+      "website": "https://www.artez.nl"
+    },
+    {
+      "id": "ahk",
+      "name": "Amsterdamse Hogeschool voor de Kunsten",
+      "abbreviation": "AHK",
+      "city": "Amsterdam",
+      "description": "Een hogeschool gespecialiseerd in kunst en cultuur.",
+      "student_count": 3400,
+      "website": "https://www.ahk.nl"
+    },
+    {
+      "id": "hku",
+      "name": "Hogeschool voor de Kunsten Utrecht",
+      "abbreviation": "HKU",
+      "city": "Utrecht",
+      "description": "Een van de grootste kunsthogescholen van Nederland.",
+      "student_count": 4000,
+      "website": "https://www.hku.nl"
+    },
+    {
+      "id": "codarts",
+      "name": "Codarts Rotterdam",
+      "abbreviation": "Codarts",
+      "city": "Rotterdam",
+      "description": "Een hogeschool voor de kunsten, met name muziek, dans en circus.",
+      "student_count": 1000,
+      "website": "https://www.codarts.nl"
+    },
+    {
+      "id": "kabk",
+      "name": "Koninklijke Academie van Beeldende Kunsten",
+      "abbreviation": "KABK",
+      "city": "Den Haag",
+      "description": "Een hogeschool voor beeldende kunst, vormgeving en fotografie.",
+      "student_count": 1200,
+      "website": "https://www.kabk.nl"
+    },
+    {
+      "id": "aeres",
+      "name": "Aeres Hogeschool",
+      "abbreviation": "Aeres",
+      "city": "Almere",
+      "description": "Een groene hogeschool met focus op landbouw, voeding en leefomgeving.",
+      "student_count": 7000,
+      "website": "https://www.aereshogeschool.nl"
+    },
+    {
+      "id": "has",
+      "name": "HAS Hogeschool",
+      "abbreviation": "HAS",
+      "city": "'s-Hertogenbosch",
+      "description": "Een groene hogeschool met opleidingen in food, agri en leefomgeving.",
+      "student_count": 3800,
+      "website": "https://www.has.nl"
+    },
+    {
+      "id": "vhl",
+      "name": "Hogeschool Van Hall Larenstein",
+      "abbreviation": "VHL",
+      "city": "Leeuwarden",
+      "description": "Een groene hogeschool met focus op duurzaamheid en leefomgeving.",
+      "student_count": 4500,
+      "website": "https://www.hvhl.nl"
+    },
+    {
+      "id": "driestar",
+      "name": "Driestar hogeschool",
+      "abbreviation": "Driestar",
+      "city": "Gouda",
+      "description": "Een christelijke hogeschool voor lerarenopleidingen en pedagogiek.",
+      "student_count": 1200,
+      "website": "https://www.driestar-educatief.nl"
+    },
+    {
+      "id": "che",
+      "name": "Christelijke Hogeschool Ede",
+      "abbreviation": "CHE",
+      "city": "Ede",
+      "description": "Een christelijke hogeschool met opleidingen in onderwijs, sociaal werk en gezondheidszorg.",
+      "student_count": 4500,
+      "website": "https://www.che.nl"
+    },
+    {
+      "id": "viaa",
+      "name": "Viaa Hogeschool",
+      "abbreviation": "Viaa",
+      "city": "Zwolle",
+      "description": "Een christelijke hogeschool voor lerarenopleidingen en sociale studies.",
+      "student_count": 3000,
+      "website": "https://www.viaa.nl"
+    },
+    {
+      "id": "marnix",
+      "name": "Marnix Academie",
+      "abbreviation": "Marnix",
+      "city": "Utrecht",
+      "description": "Een christelijke hogeschool voor lerarenopleidingen.",
+      "student_count": 2000,
+      "website": "https://www.marnixacademie.nl"
+    },
+    {
+      "id": "kpz",
+      "name": "Hogeschool KPZ",
+      "abbreviation": "KPZ",
+      "city": "Zwolle",
+      "description": "Een hogeschool voor lerarenopleidingen basisonderwijs.",
+      "student_count": 1000,
+      "website": "https://www.kpz.nl"
+    },
+    {
+      "id": "ipabo",
+      "name": "iPabo",
+      "abbreviation": "iPabo",
+      "city": "Amsterdam",
+      "description": "Een hogeschool voor lerarenopleidingen basisonderwijs.",
+      "student_count": 1000,
+      "website": "https://www.ipabo.nl"
+    },
+    {
+      "id": "thomasmore",
+      "name": "Thomas More Hogeschool",
+      "abbreviation": "Thomas More",
+      "city": "Rotterdam",
+      "description": "Een hogeschool voor lerarenopleidingen basisonderwijs.",
+      "student_count": 1000,
+      "website": "https://www.thomasmorehs.nl"
+    },
+    {
+      "id": "ish",
+      "name": "Iselinge Hogeschool",
+      "abbreviation": "Iselinge",
+      "city": "Doetinchem",
+      "description": "Een hogeschool voor lerarenopleidingen basisonderwijs.",
+      "student_count": 800,
+      "website": "https://www.iselinge.nl"
+    },
+    {
+      "id": "hotelthehague",
+      "name": "Hotelschool The Hague",
+      "abbreviation": "Hotelschool",
+      "city": "Den Haag",
+      "description": "Een gespecialiseerde hogeschool in hospitality management.",
+      "student_count": 2500,
+      "website": "https://www.hotelschool.nl"
+    },
+    {
+      "id": "tio",
+      "name": "Tio Business School",
+      "abbreviation": "Tio",
+      "city": "Amsterdam",
+      "description": "Een particuliere hogeschool gespecialiseerd in business, hospitality en marketing.",
+      "student_count": 2000,
+      "website": "https://www.tio.nl"
+    },
+    {
+      "id": "ncoi",
+      "name": "NCOI Opleidingen",
+      "abbreviation": "NCOI",
+      "city": "Hilversum",
+      "description": "Een grote particuliere aanbieder van HBO-opleidingen en trainingen.",
+      "student_count": 0,
+      "website": "https://www.ncoi.nl"
+    },
+    {
+      "id": "loi",
+      "name": "LOI Hogeschool",
+      "abbreviation": "LOI",
+      "city": "Leiderdorp",
+      "description": "Een particuliere hogeschool gespecialiseerd in afstandsonderwijs.",
+      "student_count": 0,
+      "website": "https://www.loi.nl"
+    },
+    {
+      "id": "schoevers",
+      "name": "Schoevers",
+      "abbreviation": "Schoevers",
+      "city": "Amsterdam",
+      "description": "Een particuliere hogeschool voor management, marketing en communicatie.",
+      "student_count": 0,
+      "website": "https://www.schoevers.nl"
+    },
+    {
+      "id": "nti",
+      "name": "NTI Hogeschool",
+      "abbreviation": "NTI",
+      "city": "Leiden",
+      "description": "Een particuliere hogeschool voor afstandsonderwijs.",
+      "student_count": 0,
+      "website": "https://www.nti.nl"
+    },
+    {
+      "id": "wittenborg",
+      "name": "Wittenborg University of Applied Sciences",
+      "abbreviation": "Wittenborg",
+      "city": "Apeldoorn",
+      "description": "Een particuliere hogeschool met een internationaal karakter.",
+      "student_count": 1200,
+      "website": "https://www.wittenborg.eu"
+    },
+    {
+      "id": "zuyd",
+      "name": "Zuyd Hogeschool",
+      "abbreviation": "Zuyd",
+      "city": "Heerlen",
+      "description": "Een brede hogeschool met vestigingen in Limburg.",
+      "student_count": 14000,
+      "website": "https://www.zuyd.nl"
+    },
+    {
+      "id": "gerritrietveld",
+      "name": "Gerrit Rietveld Academie",
+      "abbreviation": "Rietveld",
+      "city": "Amsterdam",
+      "description": "Een hogeschool voor beeldende kunst en vormgeving.",
+      "student_count": 950,
+      "website": "https://www.rietveldacademie.nl"
+    },
+    {
+      "id": "designacademyeindhoven",
+      "name": "Design Academy Eindhoven",
+      "abbreviation": "DAE",
+      "city": "Eindhoven",
+      "description": "Een gerenommeerde hogeschool voor design.",
+      "student_count": 700,
+      "website": "https://www.designacademy.nl"
     }
   ]
 }
