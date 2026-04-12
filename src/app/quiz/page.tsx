@@ -126,7 +126,7 @@ export default function QuizPage() {
                     onClick={startQuiz}
                     className="inline-block rounded-2xl bg-[#7DD3FC] px-6 py-3 font-medium text-[#0D0F14] transition hover:bg-[#38BDF8] active:scale-95"
                   >
-                    Start de quiz 🚀
+                    Start de quiz
                   </button>
                 </div>
               </motion.div>
@@ -199,7 +199,7 @@ export default function QuizPage() {
                   Jouw resultaten
                 </div>
                 <h2 className="text-4xl font-bold tracking-tight mb-2">
-                  Jouw matches ✨
+                  Jouw matches
                 </h2>
                 <p className="text-[#A8B3C7] mb-8">
                   Op basis van jouw antwoorden passen deze opleidingen het beste bij jou.
