@@ -2,35 +2,47 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import {
+  useEffect,
+  useRef,
+  useState,
+  type ElementType,
+  type ReactNode,
+} from "react";
+import {
+  GraduationCap,
   Lightbulb,
+  Mail,
   Target,
   Users,
-  Mail,
-  GraduationCap,
-  Rocket,
 } from "lucide-react";
 
-type InfoCardProps = {
-  title: string;
-  text: string;
-  icon: React.ElementType;
-};
-
-type TimelineItem = {
-  step: string;
-  title: string;
-  text: string;
-};
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "Quiz", href: "/quiz" },
+  { name: "Opleidingen", href: "/opleidingen" },
+  { name: "Over ons", href: "/about-us" },
+];
 
 type RevealProps = {
   children: ReactNode;
   delay?: number;
-  className?: string;
 };
 
-function Reveal({ children, delay = 0, className = "" }: RevealProps) {
+type InfoCardProps = {
+  title: string;
+  text: string;
+  icon: ElementType;
+};
+
+type StepItem = {
+  number: string;
+  title: string;
+  text: string;
+};
+
+function Reveal({ children, delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -45,9 +57,7 @@ function Reveal({ children, delay = 0, className = "" }: RevealProps) {
           observer.unobserve(node);
         }
       },
-      {
-        threshold: 0.15,
-      }
+      { threshold: 0.15 }
     );
 
     observer.observe(node);
@@ -58,10 +68,8 @@ function Reveal({ children, delay = 0, className = "" }: RevealProps) {
   return (
     <div
       ref={ref}
-      className={`${className} transform-gpu transition-all duration-700 ease-out ${
-        visible
-          ? "translate-y-0 opacity-100 blur-0"
-          : "translate-y-8 opacity-0 blur-[2px]"
+      className={`transform-gpu transition-all duration-700 ease-out ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
@@ -72,137 +80,130 @@ function Reveal({ children, delay = 0, className = "" }: RevealProps) {
 
 function InfoCard({ title, text, icon: Icon }: InfoCardProps) {
   return (
-    <article className="group h-full rounded-[28px] border border-white/10 bg-[#0D1728] p-6 shadow-[0_12px_40px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-1 hover:border-[#4F8CFF]/40 hover:bg-[#12213A]">
-      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#4F8CFF]/20 to-[#22C55E]/20 text-[#86EFAC] shadow-inner">
-        <Icon size={28} strokeWidth={2.1} />
+    <article className="rounded-[28px] border border-[#D8CBB8] bg-[#F1E6D8] p-7 shadow-[0_12px_30px_rgba(47,93,135,0.05)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#EEE2D2]">
+      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#DCE6F0] text-[#2F5D87]">
+        <Icon size={24} />
       </div>
 
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
-      <p className="mt-3 leading-8 text-[#B7C2D8]">{text}</p>
-    </article>
-  );
-}
-
-function TimelineCard({ step, title, text }: TimelineItem) {
-  return (
-    <article className="rounded-[24px] border border-white/10 bg-[#0B1526] p-5 transition-all duration-300 hover:border-[#22C55E]/30 hover:bg-[#0F1B31]">
-      <div className="flex items-start gap-4">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#4F8CFF]/15 text-sm font-bold text-[#BFD4FF]">
-          {step}
-        </div>
-
-        <div>
-          <h3 className="text-lg font-semibold text-white">{title}</h3>
-          <p className="mt-2 leading-7 text-[#B7C2D8]">{text}</p>
-        </div>
-      </div>
+      <h3 className="text-xl font-semibold text-[#1E3550]">{title}</h3>
+      <p className="mt-3 leading-8 text-[#607181]">{text}</p>
     </article>
   );
 }
 
 export default function AboutUsPage() {
+  const pathname = usePathname();
+
   const cards = [
     {
-      title: "Waarom hebben wij deze website gemaakt?",
+      title: "Waarom deze website?",
       text:
-        "Veel mbo-studenten willen doorstromen naar het hbo, maar weten nog niet altijd welke opleiding bij hen past. Met deze website willen wij dat proces duidelijker, overzichtelijker en toegankelijker maken.",
+        "Veel mbo-studenten willen doorstromen naar het hbo, maar weten nog niet precies welke opleiding bij hen past. Met deze website maken wij die oriëntatie duidelijker.",
       icon: Lightbulb,
     },
     {
       title: "Wie zijn wij?",
       text:
-        "Wij zijn studenten Software Development die samenwerken aan een onderwijsproject. Samen met andere studenten van ROC Mondriaan bouwen wij aan een platform dat helpt bij studiekeuze en voorbereiding op het hbo.",
+        "Wij zijn studenten Software Development die samenwerken aan een onderwijsproject. Samen bouwen wij aan een platform dat helpt bij studiekeuze en voorbereiding.",
       icon: Users,
     },
     {
-      title: "Wat willen wij bereiken?",
+      title: "Wat is ons doel?",
       text:
-        "Wij willen bezoekers op een duidelijke en klantvriendelijke manier helpen met informatie, oriëntatie en richting. De website moet rustig aanvoelen, professioneel ogen en makkelijk te gebruiken zijn.",
+        "Wij willen bezoekers op een rustige en gebruiksvriendelijke manier helpen met informatie, richting en overzicht bij de stap van mbo naar hbo.",
       icon: Target,
     },
   ];
 
-  const timeline: TimelineItem[] = [
+  const steps: StepItem[] = [
     {
-      step: "01",
+      number: "01",
       title: "Onderzoek",
       text:
-        "We onderzoeken opleidingen, vaardigheden en vragen die belangrijk zijn voor mbo-studenten die naar het hbo willen doorstromen.",
+        "We verzamelen informatie over opleidingen, vaardigheden en vragen die belangrijk zijn voor studenten die naar het hbo willen.",
     },
     {
-      step: "02",
-      title: "Bezoeken aan De Haagse Hogeschool",
+      number: "02",
+      title: "Ontwikkeling",
       text:
-        "Tijdens contactmomenten halen we informatie op, toetsen we onze ideeën en krijgen we feedback op inhoud en uitwerking.",
+        "Daarna vertalen we die informatie naar een digitale omgeving die duidelijk, overzichtelijk en prettig te gebruiken is.",
     },
     {
-      step: "03",
-      title: "Prototype en ontwikkeling",
+      number: "03",
+      title: "Verbeteren",
       text:
-        "We werken ons concept uit in een digitaal product, verwerken feedback en verbeteren vormgeving, usability en techniek.",
-    },
-    {
-      step: "04",
-      title: "Testen en opleveren",
-      text:
-        "Daarna testen we het product en bereiden we de eindpresentatie en oplevering voor, inclusief samenwerking, onderbouwing en reflectie.",
-    },
-  ];
-
-  const facts = [
-    {
-      label: "Projecttype",
-      value: "Onderwijsproject",
-      icon: GraduationCap,
-    },
-    {
-      label: "Doel",
-      value: "Studiekeuze en voorbereiding",
-      icon: Rocket,
-    },
-    {
-      label: "Contact",
-      value: "info@hbokeuze.nl",
-      icon: Mail,
+        "Door feedback, testen en samenwerking blijven we de website verbeteren en beter laten aansluiten op de gebruiker.",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-[#081120] text-white">
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(79,140,255,0.22),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(34,197,94,0.14),transparent_28%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(8,17,32,0.1),rgba(8,17,32,0.65))]" />
+    <main className="min-h-screen bg-[#F5EBDD] text-[#1E3550]">
+      <header className="border-b border-[#D8CBB8] bg-[#F5EBDD]/95 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5C7A96]">
+              MijnHBOKeuze
+            </p>
+            <p className="mt-1 text-sm text-[#6F7F8F]">Studiekeuzehulp</p>
+          </div>
 
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:px-8 lg:grid-cols-2 lg:items-center">
+          <nav className="hidden items-center gap-2 md:flex">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`rounded-2xl px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
+                  pathname === item.href
+                    ? "bg-[#DCE6F0] text-[#1E3550]"
+                    : "text-[#5E6F80] hover:bg-[#EADFD0] hover:text-[#1E3550]"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          <Link
+            href="/quiz"
+            className="rounded-2xl bg-[#2F5D87] px-5 py-2.5 text-sm font-semibold text-[#F5EBDD] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#264D71]"
+          >
+            Start quiz
+          </Link>
+        </div>
+      </header>
+
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(47,93,135,0.10),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(127,168,204,0.14),transparent_30%)]" />
+
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-16 md:py-20 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <Reveal>
             <div>
-              <span className="inline-flex rounded-full border border-[#22C55E]/20 bg-[#22C55E]/10 px-4 py-1 text-sm font-semibold text-[#86EFAC]">
+              <div className="inline-flex rounded-full border border-[#CFC0AA] bg-[#EFE3D2] px-4 py-2 text-sm font-semibold text-[#5C7A96]">
                 Over ons
-              </span>
+              </div>
 
-              <h1 className="mt-6 text-4xl font-bold leading-tight text-white md:text-6xl">
-                Wij bouwen aan een duidelijke en gebruiksvriendelijke website
-                voor mbo-studenten die nadenken over het hbo.
+              <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
+                Wij bouwen aan een duidelijke website voor mbo-studenten die
+                nadenken over het hbo.
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#B7C2D8]">
-                HBO Keuze is een project waarin onderzoek, samenwerking en
-                ontwikkeling samenkomen. Wij werken aan een platform dat
-                studenten helpt om beter inzicht te krijgen in opleidingen,
-                voorbereiding en vervolgstappen.
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5F6F80]">
+                MijnHBOKeuze is een project waarin onderzoek, samenwerking en
+                ontwikkeling samenkomen. We willen studiekeuze overzichtelijker
+                en toegankelijker maken.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href="mailto:info@hbokeuze.nl"
-                  className="inline-flex items-center rounded-2xl bg-[#4F8CFF] px-6 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(79,140,255,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#3D7BF0]"
+                  className="inline-flex items-center rounded-2xl bg-[#2F5D87] px-6 py-3.5 font-semibold text-[#F5EBDD] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#264D71]"
                 >
                   Neem contact op
                 </a>
 
                 <Link
                   href="/"
-                  className="inline-flex items-center rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white backdrop-blur transition-all duration-300 hover:border-white/20 hover:bg-white/10"
+                  className="inline-flex items-center rounded-2xl border border-[#CFBEA8] bg-[#F1E6D8] px-6 py-3.5 font-semibold text-[#1E3550] transition-all duration-300 hover:bg-[#E9DDCC]"
                 >
                   Terug naar home
                 </Link>
@@ -210,41 +211,38 @@ export default function AboutUsPage() {
             </div>
           </Reveal>
 
-          <Reveal delay={150}>
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-tr from-[#4F8CFF]/20 to-[#22C55E]/10 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#0D1728] p-3 shadow-[0_22px_70px_rgba(0,0,0,0.28)]">
-                <Image
-                  src="/images/studenten-aan-tafel.jpg"
-                  alt="Studenten aan tafel in overleg"
-                  width={1000}
-                  height={800}
-                  className="h-full w-full rounded-[24px] object-cover transition-transform duration-500 hover:scale-[1.02]"
-                  priority
-                />
-              </div>
+          <Reveal delay={120}>
+            <div className="overflow-hidden rounded-[32px] border border-[#D8CBB8] bg-[#F1E6D8] p-3 shadow-[0_16px_40px_rgba(47,93,135,0.06)]">
+              <Image
+                src="*/public/images/studenten-aan-tafel.jpg"
+                alt="Studenten aan tafel in overleg"
+                width={1000}
+                height={800}
+                className="h-full w-full rounded-[26px] object-cover"
+                priority
+              />
             </div>
           </Reveal>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
         <Reveal>
-          <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7FA7FF]">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#6A88A3]">
               Onze missie
             </p>
-            <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-              Een rustige, professionele en klantvriendelijke ervaring
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              Rustig, duidelijk en gebruiksvriendelijk
             </h2>
-            <p className="mt-4 text-lg leading-8 text-[#AEBBD2]">
+            <p className="mt-4 text-lg leading-8 text-[#607181]">
               Deze website is gemaakt om informatie duidelijker te presenteren
-              en studiekeuze minder lastig te maken.
+              en studenten te helpen bij het maken van een passende keuze.
             </p>
           </div>
         </Reveal>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {cards.map((card, index) => (
             <Reveal key={card.title} delay={index * 120}>
               <InfoCard
@@ -257,167 +255,135 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.03]">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-8 md:py-20 lg:grid-cols-[1.05fr_1fr]">
-          <Reveal>
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#7FA7FF]">
-                Projectaanpak
-              </p>
-              <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-                Hoe wij aan dit project werken
-              </h2>
-              <p className="mt-5 text-lg leading-8 text-[#AEBBD2]">
-                In het project werken studenten samen aan onderzoek, concept,
-                prototypes, testfase en oplevering.
-              </p>
+      <section className="border-y border-[#D8CBB8] bg-[#EFE3D2]">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
+            <Reveal>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#6A88A3]">
+                  Projectaanpak
+                </p>
+                <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+                  Hoe wij aan dit project werken
+                </h2>
+                <p className="mt-4 text-lg leading-8 text-[#607181]">
+                  Binnen het project draait het om onderzoek, ontwikkeling en
+                  samenwerken. We bouwen stap voor stap aan een platform dat
+                  beter aansluit op de gebruiker.
+                </p>
 
-              <div className="mt-8 rounded-[28px] border border-white/10 bg-[#0D1728] p-7 shadow-[0_12px_40px_rgba(0,0,0,0.16)]">
-                <h3 className="text-xl font-semibold text-white">
-                  Wat we belangrijk vinden
-                </h3>
+                <div className="mt-8 rounded-[28px] border border-[#D8CBB8] bg-[#F5EBDD] p-7 shadow-[0_10px_25px_rgba(47,93,135,0.04)]">
+                  <h3 className="text-xl font-semibold text-[#1E3550]">
+                    Wat wij belangrijk vinden
+                  </h3>
 
-                <div className="mt-5 space-y-4 text-[#B7C2D8]">
-                  <div className="flex gap-3">
-                    <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#4F8CFF]" />
-                    <p>Duidelijke informatie en logische opbouw</p>
-                  </div>
-                  <div className="flex gap-3">
-                    <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#22C55E]" />
-                    <p>Gebruiksvriendelijkheid en rustige vormgeving</p>
-                  </div>
-                  <div className="flex gap-3">
-                    <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#4F8CFF]" />
-                    <p>Samenwerking, feedback en doorontwikkeling</p>
+                  <div className="mt-5 space-y-4 text-[#607181]">
+                    <div className="flex gap-3">
+                      <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#2F5D87]" />
+                      <p>Duidelijke informatie en logische opbouw</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#6A88A3]" />
+                      <p>Rustige vormgeving en gebruiksgemak</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#2F5D87]" />
+                      <p>Samenwerking, feedback en verbetering</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
 
-          <div className="grid gap-5">
-            {timeline.map((item, index) => (
-              <Reveal key={item.step} delay={index * 100}>
-                <TimelineCard
-                  step={item.step}
-                  title={item.title}
-                  text={item.text}
-                />
-              </Reveal>
-            ))}
+            <div className="grid gap-5">
+              {steps.map((step, index) => (
+                <Reveal key={step.number} delay={index * 100}>
+                  <article className="rounded-[28px] border border-[#D8CBB8] bg-[#F5EBDD] p-6 shadow-[0_10px_25px_rgba(47,93,135,0.04)]">
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#DCE6F0] text-sm font-bold text-[#2F5D87]">
+                        {step.number}
+                      </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold text-[#1E3550]">
+                          {step.title}
+                        </h3>
+                        <p className="mt-3 leading-8 text-[#607181]">
+                          {step.text}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-20">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <Reveal>
-            <div className="overflow-hidden rounded-[30px] border border-white/10 bg-[#0D1728] p-3 shadow-[0_16px_50px_rgba(0,0,0,0.22)]">
-              <Image
-                src="/images/studenten-aan-tafel.jpg"
-                alt="Studenten aan tafel in overleg"
-                width={1000}
-                height={800}
-                className="h-full w-full rounded-[22px] object-cover transition-transform duration-500 hover:scale-[1.02]"
-              />
-            </div>
-          </Reveal>
-
-          <Reveal delay={150}>
-            <div className="rounded-[30px] border border-white/10 bg-[linear-gradient(135deg,rgba(79,140,255,0.14),rgba(34,197,94,0.08))] p-8 shadow-[0_18px_60px_rgba(0,0,0,0.22)]">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#AFC8FF]">
-                Samenwerking
-              </p>
-              <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-                Studenten Software Development en ROC Mondriaan
-              </h2>
-              <p className="mt-4 text-lg leading-8 text-[#C7D2E3]">
-                De opdracht draait om samenwerken, plannen, onderzoek doen,
-                informatie verzamelen en een eindproduct presenteren.
-              </p>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {facts.map((fact) => {
-                  const Icon = fact.icon;
-
-                  return (
-                    <div
-                      key={fact.label}
-                      className="rounded-2xl border border-white/10 bg-[#0A1323]/70 p-5 transition-all duration-300 hover:border-[#4F8CFF]/30"
-                    >
-                      <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#4F8CFF]/12 text-[#BFD4FF]">
-                        <Icon size={20} />
-                      </div>
-                      <p className="text-sm text-[#8FA6CC]">{fact.label}</p>
-                      <p className="mt-2 text-lg font-semibold text-white">
-                        {fact.value}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 pb-16 md:px-8 md:pb-20">
+      <section className="mx-auto max-w-5xl px-6 py-16 md:py-20">
         <Reveal>
-          <div className="rounded-[32px] border border-white/10 bg-[#0B1526] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:p-10">
-            <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div className="rounded-[32px] border border-[#D8CBB8] bg-[linear-gradient(135deg,rgba(220,230,240,0.9),rgba(239,227,210,0.95))] px-8 py-12 shadow-[0_16px_40px_rgba(47,93,135,0.06)] md:px-12">
+            <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#86EFAC]">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#6A88A3]">
                   Contact
                 </p>
-                <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-                  Heb je een vraag of wil je contact met ons opnemen?
+                <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+                  Heb je een vraag of wil je contact opnemen?
                 </h2>
-                <p className="mt-4 max-w-2xl text-lg leading-8 text-[#B7C2D8]">
-                  Neem gerust contact met ons op via e-mail. Dat kan voor
-                  vragen, feedback of opmerkingen over de website en het
-                  project.
+                <p className="mt-4 max-w-2xl text-lg leading-8 text-[#607181]">
+                  Neem gerust contact met ons op via e-mail voor vragen,
+                  feedback of opmerkingen over het project en de website.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
                     href="mailto:info@hbokeuze.nl"
-                    className="inline-flex items-center rounded-2xl bg-[#22C55E] px-6 py-3 font-semibold text-[#081120] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1fb255]"
+                    className="inline-flex items-center rounded-2xl bg-[#2F5D87] px-6 py-3.5 font-semibold text-[#F5EBDD] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#264D71]"
                   >
                     Klik hier om te mailen
                   </a>
 
                   <Link
                     href="/"
-                    className="inline-flex items-center rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white transition-all duration-300 hover:border-white/20 hover:bg-white/10"
+                    className="inline-flex items-center rounded-2xl border border-[#CFBEA8] bg-[#F1E6D8] px-6 py-3.5 font-semibold text-[#1E3550] transition-all duration-300 hover:bg-[#E9DDCC]"
                   >
                     Ga terug naar home
                   </Link>
                 </div>
               </div>
 
-              <div className="rounded-[28px] border border-white/10 bg-[#081120] p-7">
-                <p className="text-sm font-medium text-[#8FA6CC]">
-                  E-mailadres
-                </p>
-                <p className="mt-2 text-xl font-semibold text-white">
-                  info@hbokeuze.nl
-                </p>
+              <div className="grid gap-4 sm:grid-cols-1">
+                <div className="rounded-[24px] border border-[#D8CBB8] bg-[#F5EBDD] p-5">
+                  <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#DCE6F0] text-[#2F5D87]">
+                    <GraduationCap size={20} />
+                  </div>
+                  <p className="text-sm text-[#6E8092]">Projecttype</p>
+                  <p className="mt-2 text-lg font-semibold text-[#1E3550]">
+                    Onderwijsproject
+                  </p>
+                </div>
 
-                <div className="my-6 h-px bg-white/10" />
+                <div className="rounded-[24px] border border-[#D8CBB8] bg-[#F5EBDD] p-5">
+                  <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#DCE6F0] text-[#2F5D87]">
+                    <Users size={20} />
+                  </div>
+                  <p className="text-sm text-[#6E8092]">Samenwerking</p>
+                  <p className="mt-2 text-lg font-semibold text-[#1E3550]">
+                    ROC Mondriaan en studenten Software Development
+                  </p>
+                </div>
 
-                <p className="text-sm font-medium text-[#8FA6CC]">
-                  Samenwerking
-                </p>
-                <p className="mt-2 text-lg text-white">
-                  ROC Mondriaan en studenten Software Development
-                </p>
-
-                <div className="my-6 h-px bg-white/10" />
-
-                <p className="text-sm font-medium text-[#8FA6CC]">Doel</p>
-                <p className="mt-2 text-lg text-white">
-                  Mbo-studenten helpen bij hun keuze voor het hbo
-                </p>
+                <div className="rounded-[24px] border border-[#D8CBB8] bg-[#F5EBDD] p-5">
+                  <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#DCE6F0] text-[#2F5D87]">
+                    <Mail size={20} />
+                  </div>
+                  <p className="text-sm text-[#6E8092]">E-mailadres</p>
+                  <p className="mt-2 text-lg font-semibold text-[#1E3550]">
+                    info@hbokeuze.nl
+                  </p>
+                </div>
               </div>
             </div>
           </div>
