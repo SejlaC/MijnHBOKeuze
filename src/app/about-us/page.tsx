@@ -214,7 +214,7 @@ export default function AboutUsPage() {
           <Reveal delay={120}>
             <div className="overflow-hidden rounded-[32px] border border-[#D8CBB8] bg-[#F1E6D8] p-3 shadow-[0_16px_40px_rgba(47,93,135,0.06)]">
               <Image
-                src="*/public/images/studenten-aan-tafel.jpg"
+                src="/public/images/studenten-aan-tafel.jpg"
                 alt="Studenten aan tafel in overleg"
                 width={1000}
                 height={800}
